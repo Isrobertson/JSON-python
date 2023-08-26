@@ -8,8 +8,6 @@ data['isrobertson'] = {'name': 'Ian',
                        'address': 'NA',
                        'Phone': '123456789'}
 
-#testing
-print(data)
-
+# creates and sorts data into json file
 with open("temporary_data.json", 'w') as json_data:
-    json.dump(data, json_data)
+    json.dump(data, json_data, indent=4, sort_keys=True)
