@@ -1,21 +1,15 @@
 import json
 
-limit = 0
-data = ''
-print('how many students are there?')
-limit = input()
+data = {}
+#limit = 0
 
-
-# test data (needs fixing)
-for x in limit:
-    student = "student" + str(x)
-    data += '[{"Student": ' + student + ', "marks":10, "status": "Fall"}]'\
+#temporary data
+data['isrobertson'] = {'name': 'Ian',
+                       'address': 'NA',
+                       'Phone': '123456789'}
 
 #testing
-for x in limit:
-    print(data)
+print(data)
 
-# fix later
-def write_json(data, filename="1_new_json_data.json"):
-    with open(filename, "w") as f:
-        json.dump(data, f, indent=4)
+with open("temporary_data.json", 'w') as json_data:
+    json.dump(data, json_data)
