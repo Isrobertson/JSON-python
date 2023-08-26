@@ -10,4 +10,4 @@ data['isrobertson'] = {'name': 'Ian',
 
 # creates and sorts data into json file
 with open("test.json", 'w') as json_data:
-    json.dump(data, json_data, indent=4, sort_keys=True)
+    json.dump(data, json_data, indent=4)
