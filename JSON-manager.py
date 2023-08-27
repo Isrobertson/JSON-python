@@ -1,5 +1,15 @@
 import json
 
+choice = input('would you like to create a .json file? (y / n) ')
+
+if choice == 'y' or choice == 'Y':
+    print('ok.')
+elif choice == 'n' or choice == 'N':
+    print('goodbye.')
+else:
+    print('error')
+
+
 data = {}
 #limit = 0
 
