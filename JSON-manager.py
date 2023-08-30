@@ -1,4 +1,13 @@
 import json
+import csv
+
+csvString = ''
+
+#test read .csv file
+with open('in/testsheet 1.csv', 'r') as read_csv_data:
+    csvString = read_csv_data.read() + '\n'
+
+print(csvString)
 
 choice = input('would you like to create a .json file? (y / n) ')
 
