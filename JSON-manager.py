@@ -1,12 +1,19 @@
 import json
-
-csvString = ''
+import csv
 
 #test read .csv file
 with open('in/testsheet 1.csv', 'r') as read_csv_data:
-    csvString = read_csv_data.read() + '\n'
+    reader = csv.reader(read_csv_data)
+    headers = next(reader) # Read the header row in csv file
 
-print(csvString)
+    csvData = []
+    for row in reader:
+        record = {}
+        for i, value in enumerate(row):
+            record[headers[i]] = value
+        csvData.append(record)
+
+print(csvData)
 
 choice = input('would you like to create a .json file? (y / n) ')
 
