@@ -19,3 +19,8 @@ testData['clients'] = csvData # this works!
 # writes data into json file
 with open("out/test.json", 'w') as json_data:
     json.dump(testData, json_data, indent=4)
+
+# test.json read
+
+with open("out/test.json", 'r') as json_read:
+    print(json.load(json_read))
